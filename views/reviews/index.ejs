@@ -12,26 +12,38 @@
 </head>
 <body>
     <%# bootstrap used for frontend presentation / pad each entry %>
-    <div class="container">
+    <div class="container"> 
 
         <h1 class="mb-4">OntheDLreviews (movies/music/games/books)</h1>
 
-        <%# incorporate twitter timeline posts %>
-        <div>
-        <a class="twitter-timeline" data-height="300" data-width="50%"  href="https://twitter.com/OntheDLreviews?ref_src=twsrc%5Etfw"></a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <%# add div to place twitter feed and ul on same row %>
+        <div class="row">
+
+            <%# incorporate twitter timeline posts %>
+            <div class="col-md-6">
+                <a class="twitter-timeline" data-height="300" data-width="200%"  href="https://twitter.com/OntheDLreviews?ref_src=twsrc%5Etfw"></a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+
+            <%# list of in progress reviews %>
+            <div class="col-md-6">
+                <h5>Coming soon reviews</h5>
+                <ul>
+                    <li>Tenet (2020)</li>
+                    <li>Jak 2 (2003) </li>
+                    <li>Hands like Houses - Ground Dweller (2012)</li>
+                    <li>The Dark Tower (2004)</li>
+                </ul>
+            </div>
+
+            
+
+            
         </div>
 
-        <%# list of in progress reviews %>
-        <h3>Coming soon reviews</h3>
-        <ul>
-            <li>Tenet (2020)</li>
-            <li>Jak 2 (2003) </li>
-            <li>Hands like Houses - Ground Dweller (2012)</li>
-            <li>The Dark Tower (2004)</li>
-        </ul>
-
         <a href="/reviews/new" class="btn btn-success">New Review</a>
+
+        
 
 
         <% reviews.forEach(review => { %>

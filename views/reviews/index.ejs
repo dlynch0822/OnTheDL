@@ -38,6 +38,9 @@
             <div class="card mt-4">
                 <div class="card-body">
                     <h4 class="card-title"><%= review.title %></h4>
+                    <div class="d-inline">
+                        <img src="<%= review.artwork %>" width="100" height="100">
+                    </div>
                     <div class="card-subtitle text-muted mb-2">
                         <%= review.createdAt.toLocaleDateString() %>
                     </div>

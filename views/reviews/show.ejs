@@ -17,7 +17,9 @@
         </div>
         <a href="/" class="btn btn-secondary">All Reviews</a>
         <a href="/reviews/edit/<%= review.id %>" class="btn btn-info">Edit</a>
-
+        <div>
+        <img src="<%= review.artwork %>" width="250" height="250">
+        </div>
         <div>
         <%- review.sanitizedHtml %>
         </div>

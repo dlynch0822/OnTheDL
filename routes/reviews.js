@@ -40,6 +40,7 @@ function saveReviewAndRedirect(path) {
         review.title = req.body.title
         review.description = req.body.description
         review.markdown = req.body.markdown
+        review.artwork = req.body.artwork
         try {
             review = await review.save()
             res.redirect(`/reviews/${review.slug}`)

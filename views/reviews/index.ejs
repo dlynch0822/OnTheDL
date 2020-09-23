@@ -16,6 +16,10 @@
 
         <h1 class="mb-4">OntheDLreviews (movies/music/games/books)</h1>
 
+        <form action="/logout?_method=DELETE" method="POST">
+            <button type="submit">Log Out</button>
+        </form>
+
         <%# add div to place twitter feed and ul on same row %>
         <div class="row">
 
@@ -72,10 +76,6 @@
             </div>
         <% }) %>
 
-    </div>
-
-    <form action="/logout?_method=DELETE" method="POST">
-        <button type="submit">Log Out</button>
-    </form>
+    </div>  
 </body>
 </html>

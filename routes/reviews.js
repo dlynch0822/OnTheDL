@@ -2,6 +2,7 @@ const express = require('express')
 const Review = require('./../models/review')
 const router = express.Router()
 
+
 router.get('/new', (req, res) => {
     res.render('reviews/new', { review: new Review() })
 })

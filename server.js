@@ -107,4 +107,5 @@ function checkNotAuthenticated(req, res, next) {
 app.use('/reviews', reviewRouter)
 
 //set to port 3000
-app.listen(3000)
+var port = process.env.PORT || 3000
+app.listen(port)

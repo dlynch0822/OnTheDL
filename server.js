@@ -26,7 +26,10 @@ initializePassport(
 const users = []
 
 //establish MongoDB connection
-mongoose.connect('mongodb://localhost/blog', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
+mongoose.connect('mongodb+srv://dlynch:alroker4life@cluster0.i9n0m.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
+.then(() => console.log( 'Database Connected'))
+.catch(err => console.log( err ));
+
 
 //view engine converts ejs to html
 app.set('view engine', 'ejs')
